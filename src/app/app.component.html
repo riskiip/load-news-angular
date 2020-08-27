@@ -1,14 +1,16 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
+<div class="main-content">
 
-  <button mat-button [routerLink]="['/']">Home</button>
-  <button mat-button [routerLink]="['/news']">News</button>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-  <span class="example-spacer"></span>
+    <button mat-button [routerLink]="['/']">Home</button>
+    <button mat-button [routerLink]="['/news']">News</button>
 
-  <button
+    <span class="example-spacer"></span>
+
+    <button
     mat-icon-button class="example-icon favorite-icon"
     [matMenuTriggerFor]="settingsMenu"
     aria-label="Example icon-button with heart icon">
@@ -24,3 +26,5 @@
 <mat-card>
   <router-outlet></router-outlet>
 </mat-card>
+
+</div>
