@@ -3,8 +3,8 @@
     <mat-icon>menu</mat-icon>
   </button>
 
-  <button mat-button>Home</button>
-  <button mat-button>News</button>
+  <button mat-button [routerLink]="['/']">Home</button>
+  <button mat-button [routerLink]="['/news']">News</button>
 
   <span class="example-spacer"></span>
 
@@ -20,3 +20,7 @@
   <button mat-menu-item>Settings</button>
   <button mat-menu-item>Help</button>
 </mat-menu>
+
+<mat-card>
+  <router-outlet></router-outlet>
+</mat-card>
