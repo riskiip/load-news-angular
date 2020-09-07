@@ -7,6 +7,7 @@ import { NewsService } from "src/app/services/news.service";
   styleUrls: ["./news.component.scss"],
 })
 export class NewsComponent implements OnInit {
+  showSpinner = false;
   articles: Array<any>;
 
   constructor(private news: NewsService) {}
@@ -15,9 +16,20 @@ export class NewsComponent implements OnInit {
     this.getAllNews();
   }
 
+  // loadData() {
+  //   this.showSpinner = true;
+  //   setTimeout(() => {
+  //     this.showSpinner = false;
+  //   }, 2000);
+  // }
+
   getAllNews() {
+    this.showSpinner = true;
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 2000);
     return this.news.getNews().subscribe((data) => {
-      this.articles = data['articles'];
+      this.articles = data["articles"];
     });
   }
 
